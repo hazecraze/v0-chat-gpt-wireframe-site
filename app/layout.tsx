@@ -8,10 +8,21 @@ const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Surge Council | B2B Growth Consultant & AI Visibility Consultant in San Francisco",
-  description: "Surge Council is a leading B2B growth consultant and marketing consultant in San Francisco. We help brands uncover hidden revenue, optimize MarTech, and boost AI visibility in ChatGPT, Perplexity, and Gemini. Expert AI visibility consultant services.",
-  generator: "v0.app",
-  keywords: ["B2B growth consultant", "marketing consultant San Francisco", "AI visibility consultant", "growth strategy", "MarTech optimization", "AI search optimization"],
+  title: "B2B Growth & AI Search Optimization | Surge Council",
+  description: "Boost AI visibility in ChatGPT, Perplexity & Gemini. Expert B2B growth consulting for modern brands. 15+ years Fortune 500 experience. Free audit available.",
+  generator: "v0.dev",
+  keywords: ["B2B growth consultant", "AI visibility consulting", "generative engine optimization", "GEO", "ChatGPT optimization", "Perplexity SEO", "MarTech optimization", "San Francisco"],
+  alternates: {
+    canonical: "https://surgecouncil.com",
+  },
+  openGraph: {
+    title: "B2B Growth & AI Search Optimization | Surge Council",
+    description: "Boost AI visibility in ChatGPT, Perplexity & Gemini. Expert B2B growth consulting. 15+ years Fortune 500 experience.",
+    url: "https://surgecouncil.com",
+    siteName: "Surge Council",
+    locale: "en_US",
+    type: "website",
+  },
 }
 
 const organizationSchema = {
@@ -86,6 +97,47 @@ const serviceSchema = {
   }
 }
 
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "Surge Council",
+  description: "AI Visibility and B2B Growth Consulting in San Francisco",
+  url: "https://surgecouncil.com",
+  email: "aaron@surgecouncil.com",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "San Francisco",
+    addressRegion: "CA",
+    addressCountry: "US"
+  },
+  areaServed: [
+    { "@type": "Country", name: "United States" },
+    { "@type": "AdministrativeArea", name: "California" }
+  ],
+  founder: {
+    "@type": "Person",
+    name: "Aaron Hazen",
+    jobTitle: "Founder & CEO",
+    description: "15+ years experience with Fortune 500 companies in B2B growth and AI visibility"
+  },
+  priceRange: "$$",
+  knowsAbout: [
+    "Generative Engine Optimization",
+    "AI Visibility Consulting",
+    "B2B Growth Strategy",
+    "MarTech Optimization",
+    "ChatGPT Optimization",
+    "Perplexity SEO"
+  ]
+}
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Surge Council",
+  url: "https://surgecouncil.com",
+}
+
 const reviewSchema = {
   "@context": "https://schema.org",
   "@type": "Review",
@@ -116,6 +168,14 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
         <script
           type="application/ld+json"
