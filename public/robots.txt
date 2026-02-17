@@ -1,0 +1,35 @@
+# Surge Council - robots.txt
+# Allow all major search engines and AI crawlers
+
+User-agent: *
+Allow: /
+
+# AI Crawlers - explicitly allowed for GEO visibility
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Omgilibot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+Sitemap: https://surgecouncil.com/sitemap.xml
