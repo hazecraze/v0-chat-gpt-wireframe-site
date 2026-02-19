@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   description: "Boost AI visibility in ChatGPT, Perplexity & Gemini. Expert B2B growth consulting for modern brands. 15+ years Fortune 500 experience. Free audit available.",
   generator: "v0.dev",
   keywords: ["B2B growth consultant", "AI visibility consulting", "generative engine optimization", "GEO", "ChatGPT optimization", "Perplexity SEO", "MarTech optimization", "San Francisco"],
+  verification: {
+    google: "R1mA6sGoBvBAZKp6WlerKRlSvLF0c7mkB5AP38iIsig",
+  },
   alternates: {
     canonical: "https://surgecouncil.com",
   },
@@ -165,7 +168,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta name="google-site-verification" content="R1mA6sGoBvBAZKp6WlerKRlSvLF0c7mkB5AP38iIsig" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
