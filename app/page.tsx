@@ -464,7 +464,7 @@ function CTASection() {
               disabled={isLoading}
               className="w-full rounded-lg px-6 py-3 bg-slate-900 text-white font-medium hover:bg-slate-800 disabled:opacity-50 transition"
             >
-              {isLoading ? "Sending..." : "Schedule Consultation"}
+              {isLoading ? "Sending..." : "Submit"}
             </button>
             {message && (
               <p className={`text-center text-sm ${message.includes("Thanks") ? "text-green-600" : "text-red-600"}`}>
