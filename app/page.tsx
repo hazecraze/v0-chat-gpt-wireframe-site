@@ -40,6 +40,9 @@ function SiteHeader() {
           <a href="/about" className="hover:text-slate-900">
             About
           </a>
+          <a href="/blog" className="hover:text-slate-900">
+            Blog
+          </a>
           <a href="#contact" className="hover:text-slate-900">
             Contact
           </a>
@@ -89,7 +92,9 @@ function HeroSection() {
           className="mt-8 flex flex-col sm:flex-row gap-4 justify-center"
         >
           <a
-            href="#contact"
+            href="https://calendly.com/aaron-surgecouncil"
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-lg px-8 py-3 bg-white text-slate-900 font-bold hover:bg-slate-100 transition text-center"
           >
             Schedule a Consultation
