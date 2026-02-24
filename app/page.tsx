@@ -4,6 +4,7 @@ import type React from "react"
 import { motion } from "framer-motion"
 import { useState } from "react"
 import { WaveDivider } from "@/components/wave-divider"
+import Image from "next/image"
 
 export default function Page() {
   return (
@@ -40,6 +41,9 @@ function SiteHeader() {
           <a href="/about" className="hover:text-slate-900">
             About
           </a>
+          <a href="/blog" className="hover:text-slate-900">
+            Blog
+          </a>
           <a href="#contact" className="hover:text-slate-900">
             Contact
           </a>
@@ -58,7 +62,16 @@ function SiteHeader() {
 function HeroSection() {
   return (
     <section className="relative overflow-hidden bg-slate-950 min-h-[700px] flex items-center">
-      {/* Removed the image background and restored the gradient blobs */}
+      <div className="absolute inset-0 opacity-15">
+        <Image
+          src="/images/wave-pattern.jpeg"
+          alt=""
+          fill
+          className="object-cover object-center"
+          priority
+        />
+      </div>
+      <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-slate-950/60" />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl pointer-events-none">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl mix-blend-screen" />
         <div className="absolute top-20 right-1/4 w-96 h-96 bg-indigo-500/20 rounded-full blur-3xl mix-blend-screen" />
@@ -89,7 +102,9 @@ function HeroSection() {
           className="mt-8 flex flex-col sm:flex-row gap-4 justify-center"
         >
           <a
-            href="#contact"
+            href="https://calendly.com/aaron-surgecouncil"
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-lg px-8 py-3 bg-white text-slate-900 font-bold hover:bg-slate-100 transition text-center"
           >
             Schedule a Consultation
@@ -122,27 +137,35 @@ function WhoWeServeBar() {
 function ServicesOverview() {
   const services = [
     {
-      icon: "🔍",
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-amber-600"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+      ),
       title: "Opportunity Audit",
       desc: "Unlock hidden growth potential with our data-driven Opportunity Audit.",
       color: "amber",
     },
     {
-      icon: "👥",
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-teal-600"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      ),
       title: "Audience Strategy",
       desc: "Turn potential customers into loyal advocates with targeted Audience Strategy.",
       color: "teal",
     },
     {
-      icon: "🛠️",
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-blue-600"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
+      ),
       title: "MarTech Stack Optimization",
       desc: "Transform your marketing tech into a powerful growth engine.",
       color: "blue",
     },
     {
-      icon: "🤖",
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-blue-600"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg>
+      ),
       title: "AI Visibility",
-      desc: "Get found in ChatGPT, Perplexity, and Gemini—the new search era.",
+      desc: "Get found in ChatGPT, Perplexity, and Gemini--the new search era.",
       isNew: true,
       color: "blue",
     },
@@ -182,7 +205,7 @@ function ServicesOverview() {
                     NEW
                   </span>
                 )}
-                <div className="text-3xl mb-3">{service.icon}</div>
+                <div className="mb-3">{service.icon}</div>
                 <h3 className="text-lg font-bold text-slate-900">{service.title}</h3>
                 <p className="mt-2 text-sm text-slate-600">{service.desc}</p>
               </motion.div>
@@ -459,7 +482,7 @@ function CTASection() {
               disabled={isLoading}
               className="w-full rounded-lg px-6 py-3 bg-slate-900 text-white font-medium hover:bg-slate-800 disabled:opacity-50 transition"
             >
-              {isLoading ? "Sending..." : "Schedule Consultation"}
+              {isLoading ? "Sending..." : "Submit"}
             </button>
             {message && (
               <p className={`text-center text-sm ${message.includes("Thanks") ? "text-green-600" : "text-red-600"}`}>
