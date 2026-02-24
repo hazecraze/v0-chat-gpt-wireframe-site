@@ -36,6 +36,9 @@ function SiteHeader() {
           <a href="/about" className="hover:text-slate-900">
             About
           </a>
+          <a href="/blog" className="hover:text-slate-900">
+            Blog
+          </a>
           <a href="/#contact" className="hover:text-slate-900">
             Contact
           </a>
