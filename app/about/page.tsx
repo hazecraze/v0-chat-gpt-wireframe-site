@@ -183,29 +183,44 @@ function FounderSection() {
   return (
     <section className="border-t border-slate-200 bg-white">
       <div className="container mx-auto px-6 py-20">
-        <div className="grid gap-8 md:gap-12 md:grid-cols-2 items-center">
-          <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-            <img src="/images/1739498273226.jpeg" alt="Founder" className="rounded-2xl shadow-lg max-w-xs" />
-          </motion.div>
-          <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">Meet Aaron</h2>
-            <p className="text-lg text-slate-600 leading-relaxed mb-4">
-              Aaron brings over 15 years of experience in strategic growth consulting and marketing transformation. His
-              passion is helping businesses uncover their true value proposition and build strategies that drive real,
-              measurable impact.
-            </p>
-            <p className="text-lg text-slate-600 leading-relaxed mb-4">
-              With a data-driven approach and deep expertise across digital strategy, marketing technology, and emerging
-              platforms like AI search, Aaron has guided Fortune 500 companies and ambitious startups alike through
-              complex growth challenges.
-            </p>
-            <p className="text-lg text-slate-600 leading-relaxed">
-              When Aaron's not strategizing with clients, you'll find him exploring new marketing technologies,
-              analyzing market trends, and thinking about how the future of search and discovery is changing the game
-              for businesses everywhere.
-            </p>
-          </motion.div>
-        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="max-w-4xl mx-auto rounded-2xl border border-slate-200 shadow-lg overflow-hidden"
+        >
+          <div className="flex flex-col md:flex-row">
+            <div className="md:w-2/5 bg-slate-900 flex items-stretch">
+              <img
+                src="/images/1739498273226.jpeg"
+                alt="Aaron Hazen, Founder of Surge Council"
+                className="w-full h-72 md:h-auto object-cover object-top"
+              />
+            </div>
+            <div className="md:w-3/5 p-8 md:p-10 bg-white flex flex-col justify-center">
+              <p className="text-sm font-semibold text-teal-600 uppercase tracking-widest mb-2">Founder</p>
+              <h2 className="text-3xl font-bold text-slate-900 mb-4">Meet Aaron Hazen</h2>
+              <p className="text-slate-600 leading-relaxed mb-4">
+                Aaron brings over 15 years of experience in strategic growth consulting and marketing transformation. His
+                passion is helping businesses uncover their true value proposition and build strategies that drive real,
+                measurable impact.
+              </p>
+              <p className="text-slate-600 leading-relaxed mb-4">
+                With a data-driven approach and deep expertise across digital strategy, marketing technology, and emerging
+                platforms like AI search, Aaron has guided Fortune 500 companies and ambitious startups alike through
+                complex growth challenges.
+              </p>
+              <a
+                href="https://calendly.com/aaron-surgecouncil"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-2 self-start rounded-lg px-5 py-2.5 bg-slate-900 text-white text-sm font-medium hover:bg-slate-800 transition"
+              >
+                Schedule a Conversation
+              </a>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   )
@@ -250,7 +265,9 @@ function CTASection() {
             Let's talk about your business and explore how Surge Council can help accelerate your growth.
           </p>
           <a
-            href="/#contact"
+            href="https://calendly.com/aaron-surgecouncil"
+            target="_blank"
+            rel="noopener noreferrer"
             className="mt-8 inline-flex rounded-lg px-6 py-3 bg-slate-900 text-white font-medium hover:bg-slate-800 transition"
           >
             Schedule a Consultation
